@@ -1,0 +1,170 @@
+body{
+    font-family: Arial, Helvetica;
+    background-image: url(https://th.bing.com/th/id/R.96baf1609ee0f33fe171bf86a1becc83?rik=yN1Ed3pVvR%2bsQw&pid=ImgRaw&r=0);
+    background-repeat: repeat;
+    background-size: cover;
+    margin: 10%;
+    padding: 0;
+    font-family: montserrat;
+    height: 100vh;
+    border-radius: 10px;
+}
+
+.titulo h1 {
+    color: rgb(1, 1, 1);
+    text-align: center;
+    text-decoration-line: underline;
+}
+nav{
+    max-width: 900px;
+    margin: auto;
+    background-image: url(https://i.pinimg.com/originals/75/08/fa/7508fa648fd72956f403dff75c0d2a6d.gif);
+    font-size: 20px;
+    margin-top: 50px;
+}
+.menu{
+    list-style:none;
+    display: flex;
+    justify-content: space-around;   
+}
+
+.menu > li > a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding:15px 20px;
+}
+
+.menu li a:hover{
+    background: #ff0000;
+}
+
+.menu-vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, .5);
+}
+.menu li:hover .menu-vertical{
+    display: block;
+}
+.menu-vertical li:hover{
+     background-color: aqua;
+}
+.menu-vertical li a{
+    display: block;
+    color: aliceblue;
+    padding: 15px 15px 15px 20px;
+    text-decoration: none ;
+}
+.info1 {
+    color:#061206;
+}
+.formualrio{
+    margin: 45px;
+position: relative;
+    margin-top: 100px;
+    background:#080b0b;
+    color: white;
+}
+.formulario form{
+    position: relative;
+    background-image: url(https://th.bing.com/th/id/R.cdb3189bdd8d636db04c2b3d29583062?rik=whL5glqqogxnog&riu=http%3a%2f%2fwww.gratistodo.com%2fwp-content%2fuploads%2f2016%2f11%2fFondos-pantalla-perros-13.jpg&ehk=lSOiFh7c7v5lfXJK3qPmJqq0PuoBJZXsuT%2bTKmVt9bc%3d&risl=&pid=ImgRaw&r=0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    box-shadow: 0 0 6px 0;
+box-sizing:content-box;
+border-radius: 30px;
+width: 100%;
+margin: 45px;
+}
+
+.tituloregistro{
+    text-align: center;
+    height: auto;
+}
+
+
+.formualrio1{
+    margin: 45px;
+position: relative;
+    margin-top: 100px;
+    background:#080b0b;
+    color: white;
+}
+
+.formulario1 form{
+    position: relative;
+    background-image: url(https://th.bing.com/th/id/R.cdb3189bdd8d636db04c2b3d29583062?rik=whL5glqqogxnog&riu=http%3a%2f%2fwww.gratistodo.com%2fwp-content%2fuploads%2f2016%2f11%2fFondos-pantalla-perros-13.jpg&ehk=lSOiFh7c7v5lfXJK3qPmJqq0PuoBJZXsuT%2bTKmVt9bc%3d&risl=&pid=ImgRaw&r=0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    box-shadow: 0 0 6px 0;
+box-sizing:content-box;
+border-radius: 30px;
+width: 100%;
+margin: 45px;
+}
+.titulourgencia {
+    text-decoration: underline;
+    text-align: center;
+    color: #151313;
+}
+.imagen{
+    width: 500px;
+    height: 400px;
+    margin: 20px;
+}
+.pie{
+    position: fixed;
+left: 600px;
+bottom: 0;
+width: 100%;
+padding: 0px;
+text-align: center;
+}
+.carrusel{
+    margin: auto;
+    height: 100px;
+    position:absolute;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+    top: calc(50% - -800px);
+  left: calc(50% - 50px); 
+}
+
+@keyframes rotate{
+    0% {transform: perspective(1000px) rotateY(0deg);}
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.carrusel span{
+ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
+}
+.carrusel span img{
+    position:absolute;
+    top: 0;
+    left: 0;
+    border-radius: 100px;
+    object-fit: cover;
+    transition: 2s;
+}
+
+
+.carrusel span:hover img{
+    transform: translateY(-50px) scale(1.2);
+}

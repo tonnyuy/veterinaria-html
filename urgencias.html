@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<div class="tituloregistro">
+  <title>Formulario de urgencias</title>
+</div>
+  <style>
+    .error {
+      color: rgb(255, 5, 5);
+      font-size: 200%;
+    }
+
+  </style>
+  <link rel="stylesheet" href="veterinaria.css"
+</head>
+<body>
+
+  <h1 class="titulourgencia">REGISTRO DE URGENCIAS MEDICAS </h1>
+    <div class="formulario1">
+  <form id="registroForm" onsubmit="validarForm(event)">
+    <div class="username">
+    <label for="nombre">Nombre de cliente:</label>
+    <input type="text" id="nombre" >
+    <span id="nombreError" class="error"></span>
+    <br>
+    <br>
+</div>
+<div class="email"> 
+    <label for="email">Email:</label>
+    <input type="email" id="email" >
+    <span id="emailError" class="error"></span>
+    </div>
+    <br>
+    <br>
+    <div class="mascota">
+    <label for="mascota">mascota:</label>
+    <input type="text" id="mascota" >
+    <span id="mascotaError" class="error"></span>
+    <br>
+    <br>
+    <div class="vacunas">
+        <label for="vacunas">vacunas :</label>
+        <select id="vacunas" name="vacunas" required>
+          <option value="">Selecciona una opción</option>
+          <option value="dosis1">1 dosis</option>
+          <option value="dosis2">2 dosis</option>
+          <option value="dosis3">3 dosis</option>
+          <option value="dosis4">4 dosis</option>
+          <option value="dosis5"> 4 dosis y la de rabia</option>
+        </select>
+        <br>
+        <br>
+        <div class="descripcion">
+            <label for="descripcion">haga una breve descripcion de como se comporta su mascota</label>
+            <input type="text" id="mascota" name="mascota" required><br>
+          </div>
+<br>
+<br>
+          <div class="estadourgencia">
+            <label for="estado">¿siente que necesita de extrema urgencia ser atendido?</label>
+            <br>
+            <br>
+            <label for="necesita">Si lo necesita</label>
+        <input type="radio" id="necesita" name="gender" value="pase">
+        
+        <label for="esperar">puede esperar a ser atendido</label>
+        <input type="radio" id="esperar" name="gender" value="skin">
+        
+        
+          </div>
+
+</div>
+<br>
+<br>
+
+    <input type="submit" value="REGISTRAR URGENCIA">
+  </form>
+</div>
+
+  <script>
+    function validarForm(event) {
+      event.preventDefault(); 
+
+     
+      var nombre = document.getElementById("nombre").value;
+      var email = document.getElementById("email").value;
+        var mascota = document.getElementById("mascota").value;
+       
+
+
+      if (nombre === "") {
+        document.getElementById("nombreError").textContent = "Debe ingresar un nombre";
+        return;
+      } else {
+        document.getElementById("nombreError").textContent = "";
+      }
+
+
+      if (email === "") {
+        document.getElementById("emailError").textContent = "Debe ingresar un email";
+        return;
+      } else {
+        document.getElementById("emailError").textContent = "";
+      }
+    
+      if (mascota === "") {
+        document.getElementById("mascotaError").textContent = "Debe ingresar un nombre de mascota";
+        return;
+      } else {
+        document.getElementById("mascotaError").textContent = "";
+      }
+
+
+      alert("¡Registro exitoso! has click en aceptar para volver al menu principal");
+      window.location.href='veterinaria.html'; 
+      
+}
+  </script>
+  
+</body>
+</html>
